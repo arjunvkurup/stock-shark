@@ -1,8 +1,8 @@
-import React, { SyntheticEvent } from 'react'
+import React, { SyntheticEvent } from "react";
 
 interface Props {
-    onPortfolioDelete: (e: SyntheticEvent) => void;
-    portfolioValue: string;
+  onPortfolioDelete: (e: SyntheticEvent) => void;
+  portfolioValue: string;
 }
 
 const DeletePortfolio = ({ onPortfolioDelete, portfolioValue }: Props) => {
@@ -15,7 +15,7 @@ const DeletePortfolio = ({ onPortfolioDelete, portfolioValue }: Props) => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default DeletePortfolio
+export default DeletePortfolio;

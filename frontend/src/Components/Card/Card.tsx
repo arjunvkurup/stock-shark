@@ -1,14 +1,14 @@
-import React, { SyntheticEvent } from 'react'
-import "./Card.css"
-import { CompanySearch } from '../../company';
-import AddPortfolio from '../Portfolio/AddPortfolio/AddPortfolio';
-import { Link } from 'react-router-dom';
-import { symbolName } from 'typescript';
+import React, { SyntheticEvent } from "react";
+import "./Card.css";
+import { CompanySearch } from "../../company";
+import AddPortfolio from "../Portfolio/AddPortfolio/AddPortfolio";
+import { Link } from "react-router-dom";
+import { symbolName } from "typescript";
 
 interface Props {
-    id: string;
-    searchResult: CompanySearch;
-    onPortfolioCreate: (e: SyntheticEvent) => void;
+  id: string;
+  searchResult: CompanySearch;
+  onPortfolioCreate: (e: SyntheticEvent) => void;
 }
 
 const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props): JSX.Element => {
@@ -25,12 +25,9 @@ const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props): 
       <p className="font-bold text-black">
         {searchResult.exchangeShortName} - {searchResult.stockExchange}
       </p>
-      <AddPortfolio
-        onPortfolioCreate={onPortfolioCreate}
-        symbol={searchResult.symbol}
-      />
+      <AddPortfolio onPortfolioCreate={onPortfolioCreate} symbol={searchResult.symbol} />
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
