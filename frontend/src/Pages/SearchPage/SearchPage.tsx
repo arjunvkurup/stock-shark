@@ -15,7 +15,6 @@ const SearchPage = (props: Props) => {
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
-    console.log(e);
   };
 
   const onSearchSubmit = async (e: SyntheticEvent) => {
